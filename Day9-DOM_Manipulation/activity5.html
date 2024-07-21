@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-5</title>
+    <style>
+        #header {
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="header">On Click Event</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nobis nesciunt repudiandae dolore dicta. Ut accusamus laudantium doloremque earum soluta? Recusandae, molestias? Expedita porro quasi est sequi ipsa omnis quisquam totam molestias!</p>
+        <button id="btn">Click to change content</button>
+    </div>
+</body>
+<script>
+    // Task 9 : onclick event
+
+    const button = document.getElementById('btn');
+    button.addEventListener("click", () => {
+        const para = document.getElementById('para');
+
+        para.textContent = "This is a paragraph which gets changed using DOM manipulation."
+    });
+
+    // Task 10 : onmouseover event
+
+    const header = document.getElementById('header');
+
+    header.addEventListener('mouseover', () => {
+        header.style.borderColor = "red";
+    });
+
+
+
+</script>
+</html>

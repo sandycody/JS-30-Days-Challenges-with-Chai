@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-2</title>
+</head>
+<body>
+    <nav>
+        <ul id="ulElem">
+
+        </ul>
+    </nav>
+</body>
+<script>
+    // Task 3 : Creating an element and appending textContent to it
+
+    const createDiv = document.createElement('div');
+    createDiv.textContent = "This is new div created using DOM manipulation";
+    document.body.append(createDiv);
+    document.body.style.fontSize = "20px";
+    document.body.style.fontWeight = "bold";
+
+
+    // Task 4 : Create a new li element and add it to ul
+
+    const liElem = document.createElement('li');
+    liElem.textContent = "Home";
+    liElem.style.listStyleType = "none";
+    liElem.style.color = "blue";
+    document.getElementById('ulElem').appendChild(liElem);
+</script>
+</html>

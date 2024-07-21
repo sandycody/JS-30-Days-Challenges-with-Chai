@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-4</title>
+    <style>
+        .changeColor {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="header">Image Tag</h1>
+        <img src="https://avatars.githubusercontent.com/u/68498988?v=4" alt="Image" id="changeSrc">
+
+        <button onclick="addClass()">Add Class</button>
+        <button onclick="removeClass()">Remove Class</button>
+    </div>
+</body>
+<script>
+    // Task 7 : Modified src of img tag
+
+    const imgLink = document.getElementById("changeSrc");
+
+    imgLink.src = "https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+
+    imgLink.style.width = "400px";
+
+    // Task 8 : Add and remove CSS class to/from an HTML element
+    
+    const addClass = () => {
+        const cssClass = document.getElementById("header");
+        cssClass.classList.add('changeColor');
+    }
+    
+    const removeClass = () => {
+        const cssClass = document.getElementById("header");
+        cssClass.classList.remove('changeColor');
+    }
+</script>
+</html>

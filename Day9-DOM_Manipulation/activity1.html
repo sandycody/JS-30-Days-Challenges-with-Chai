@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-1</title>
+</head>
+<body>
+    <div>
+        <h1 id="changeContent" class="changeBgColor">Select and manipulate HTML element</h1>
+    </div>
+</body>
+<script>
+        // Task 1 : Select and manipulate HTML element by its ID
+
+        const h1Content = document.getElementById('changeContent');
+        h1Content.textContent = "This is my Task 1";
+
+        // Task 2 : Select and manipulate HTML using element by its class
+
+        const h1BgColor = document.getElementsByClassName('changeBgColor');
+        console.log(h1BgColor);
+        h1BgColor[0].style.backgroundColor = "orange";
+
+</script>
+</html>

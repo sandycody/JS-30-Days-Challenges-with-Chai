@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-3</title>
+</head>
+<body>
+    <div id="divContainer">
+        <h1 class="headingContent">This is the heading tag</h1>
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae laborum adipisci perferendis, porro voluptate minus repellat quasi dignissimos ex qui doloremque. Reprehenderit, ducimus.</p>
+        <a href="https://api.github.com/users/sandycody" target="_blank">This is my Github API</a>
+        <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cumque dolor cupiditate!</p>
+    </div>
+</body>
+<script>
+    // Task 5 : Select an HTML element and remove it from the DOM
+
+    const h1Remove = document.getElementsByClassName('headingContent')[0];
+
+    h1Remove.remove();
+
+    // Task 6 : Remove last child of HTML element
+
+    const children = document.getElementById('divContainer');
+
+    children.removeChild(children.lastElementChild);
+</script>
+</html>
