@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <style>
+        #container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Events</h1>
+    <div>
+        <form id="form">
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            <input type="text" id="email" name="email" placeholder="Enter Email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="container">
+        <label for="singers">Choose a Singer : </label>
+        <select name="singers" id="singers">
+            <option value="default">Select Singer</option>
+            <option value="Karan Aujla">Karan Aujla</option>
+            <option value="Arjan Dhillon">Arjan Dhillon</option>
+            <option value="Tegi Pannu">Tegi Pannu</option>
+            <option value="Sukha">Sukha</option>
+            <option value="Navaan Sandhu">Navaan Sandhu</option>
+        </select>
+    </div>
+</body>
+<script>
+
+    // Task 7 : submit event listener
+    const form = document.querySelector('#form');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        console.log(`The name is ${name} and email is ${email}`);
+    });
+
+    // Task 8 : change event listener on select tag
+
+    const selectSinger = document.querySelector('#singers');
+
+    selectSinger.addEventListener('change', (e) => {
+        const para = document.createElement('p');
+        if (e.target.value === 'default') return;
+        
+        para.textContent = `Singer name is : ${e.target.value}`;
+
+        const divContent = document.querySelector('#container');
+        divContent.appendChild(para); 
+
+    });
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <h1>Event Delegation</h1>
+    <div>
+        <ul id="categoryFood">
+            <li>Sandwich</li>
+            <li>Pulse and Rice</li>
+            <li>Ladyfinger</li>
+            <li>Sambhar Dosa</li>
+            <li>Samosa</li>
+        </ul>
+    </div>
+    <div id="parent">
+        <button type="button" id="addItem">Add</button>
+        <ul id="addList">
+        </ul>
+    </div>
+</body>
+<script>
+    // Task 9 : click event listener using event delegation
+
+    const ul = document.querySelector('#categoryFood');
+
+    ul.addEventListener('click', (e) => {
+        if (e.target.nodeName === 'LI') {
+            console.log(e.target.innerText);
+        }
+    });
+
+    // Task 10 : Add an event listener to a parent element that listens for events from dynamically added child elements.
+
+    const parent = document.querySelector('#parent');
+    const addList = document.querySelector('#addList');
+    const addItem = document.querySelector('#addItem');
+
+    addItem.addEventListener('click', () => {
+        const newList = document.createElement('li');
+        newList.textContent = `List Item ${addList.children.length + 1}`;
+        addList.appendChild(newList);
+    });
+
+    parent.addEventListener('click', (e) => {
+        if (e.target.tagName === 'LI') {
+            console.log(e.target.innerHTML);
+        }
+    });
+
+</script>
+
+</html>

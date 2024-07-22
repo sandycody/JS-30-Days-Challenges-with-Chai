@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        h1 {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Mouse Events</h1>
+</body>
+<script>
+    // Task 3 : Add mouseover event
+
+    document.querySelector('#header').addEventListener('mouseover', () => {
+        document.querySelector('#header').style.backgroundColor = 'blue';
+    });
+
+    // Task 4 : mouseout event
+
+    document.querySelector('#header').addEventListener('mouseout', () => {
+        document.querySelector('#header').style.backgroundColor = 'purple';
+    });
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body>
+    <h1>Keyboard Events</h1>
+    <input type="text" id="inp">
+</body>
+<script>
+    // Task 5 : Add keydown event listener
+    const inp = document.querySelector('#inp');
+
+    inp.addEventListener('keydown', (e) => {
+        console.log(e.key);
+    });
+
+    // Task 6 : Add keyup event listener
+
+    const p = document.createElement('p');
+
+    inp.addEventListener('keyup', (e) => {
+        p.textContent += e.key;
+        document.body.appendChild(p);
+    });
+
+</script>
+</html>

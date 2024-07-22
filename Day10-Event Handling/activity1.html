@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Event Handling</title>
+    <style>
+        img {
+           margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basic Event Handling</h1>
+    <div>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem aliquam illum perspiciatis ratione, ab ullam possimus omnis dolores aperiam accusamus vitae magni dicta deleniti velit! Sapiente porro nostrum, voluptates impedit accusamus adipisci modi nihil ullam quia aperiam a distinctio aut magnam totam. Consequuntur, cum.</p>
+        <button id="btn">Change the content</button>
+    </div>
+    <div>
+        <img src="https://avatars.githubusercontent.com/u/68498988?v=4" id="image" />
+    </div>
+</body>
+<script>
+    // Task 1 : Add Click Event Listener
+
+    document.querySelector('#btn').addEventListener('click', () => {
+        document.querySelector('#para').textContent = 'This is the updated paragraph.';
+    });
+
+    // Task 2 : Add double-click event listener
+
+    const toggleImg = document.querySelector('#image');
+
+    toggleImg.addEventListener('dblclick', () => {
+        toggleImg.style.display = "none";
+    });
+
+</script>
+
+</html>
