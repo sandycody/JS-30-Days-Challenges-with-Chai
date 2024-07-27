@@ -120,7 +120,8 @@ console.log(`The full name is ${per.fullName}`); //The full name is Sandeep Wadh
 // Task 8 : Add a setter method to Person2 class to update the name properties
 
 const anotherPerson = new Person2("John", "Doe");
-console.log(anotherPerson.fullName); //John Doe
+console.log(anotherPerson.fullName); //John Doe  (Note : The reason you don't use parentheses with console.log(person.fullName) is that the getter is not a regular method but a property accessor. The get keyword defines a getter method, and when you access fullName, JavaScript automatically calls the getter method behind the scenes.)
+(So when using a getter and setter methods, they are accessed like a property rather than a method.)
 
 anotherPerson.fullName = "James Phoenix";
 console.log(`The updated name becomes ${anotherPerson.fullName}`);
