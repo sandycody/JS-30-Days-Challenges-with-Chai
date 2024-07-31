@@ -64,6 +64,7 @@ list.addNode(300);
 list.addNode(400);
 list.addNode(500);
 list.addNode(600);
+list.addNode(700);
 
 console.log("List after adding nodes: ");
 list.displayNodes();
