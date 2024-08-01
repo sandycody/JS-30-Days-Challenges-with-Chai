@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding LocalStorage</title>
+</head>
+<body>
+    <div>
+        <h1>LocalStorage</h1>
+    </div>
+</body>
+<script>
+    // Task 1 : Write a script to save a string value to localStorage and retrieve it. log the retrieved value.
+
+    localStorage.setItem("string", "John Doe is an anonymous name.");
+
+    const retrievedString = localStorage.getItem("string");
+
+    console.log(`Retrieved String : ${retrievedString}`);
+
+    console.log();
+
+    // Task 2 : Write a script to save an object to localStorage by converting it to a JSON String. Retrieve and parse the object, then log it.
+
+    const employee = {
+        id: 100,
+        name: "Kevin",
+        profile: "Data Analyst"
+    }
+
+    localStorage.setItem("Employee", JSON.stringify(employee));
+
+    const retrievedObject = JSON.parse(localStorage.getItem("Employee"));
+    console.log('Retrieved and Parsed object : ', retrievedObject);
+</script>
+</html>

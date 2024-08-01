@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparing LocalStorage and SessionStorage</title>
+</head>
+<body>
+    <h1>Comparing LocalStorage and SessionStorage</h1>
+</body>
+<script>
+    // Task 9 : Write a function that accepts a key and a value, and saves the value to both localStorage and sessionStorage. Retrieve and log the values from both storage mechanisms.
+
+    const saveToBothStorage = (key, value) => {
+        localStorage.setItem(key, JSON.stringify(value));
+        sessionStorage.setItem(key, JSON.stringify(value));
+    };
+
+    saveToBothStorage("DummyKey", "DummyValue");
+
+    console.log(JSON.parse(localStorage.getItem("DummyKey")));
+    console.log(JSON.parse(sessionStorage.getItem("DummyKey")));
+
+    // Task 10 : Write a function that clears all data from both localStorage and sessionStorage. Verify that both storages are empty.
+
+    const clearDataFromBothStorage = () => {
+        localStorage.clear();
+        sessionStorage.clear();
+    }
+    
+    clearDataFromBothStorage();
+
+    if (localStorage.length === 0) {
+        console.log(`localStorage is Empty`);
+    } else {
+        console.log(`localStorage is not Empty`);
+    }
+
+    if (sessionStorage.length === 0) {
+        console.log(`sessionStorage is Empty`);
+    } else {
+        console.log(`sessionStorage is not Empty`);
+    }
+
+</script>
+</html>
