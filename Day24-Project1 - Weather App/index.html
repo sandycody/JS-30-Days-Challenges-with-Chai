@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="input-group">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()">Get Weather</button>
+            <button id="btn2" onclick="getFiveDayData()">Get 5 Day Forecast</button>
+        </div>
+        <div class="weather-info" id="weatherInfo1">
+            <!-- Weather information will be displayed here -->
+        </div>
+        <div class="weather-info" id="weatherInfo2">
+            <!-- 5-day forecast will be displayed here -->
+        </div>
+    </div>
+</body>
+<script type="module" src="./script.js"></script>
+</html>
