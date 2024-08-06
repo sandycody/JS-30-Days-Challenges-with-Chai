@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+
+.header h1 {
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: rgb(209, 209, 209);
+    font-size: 50px;
+    text-align: center;
+}
+
+.movie-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#title {
+    font-family: fantasy;
+    font-size: 20px;
+    color: white;
+    margin-right: 120px;
+}
+
+#release-year {
+    font-family: fantasy;
+    font-size: 25px;
+    color: white;
+    margin-left: 286px;
+}
+
+#poster {
+    font-family: fantasy;
+    color: white;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 100px;
+}
+
+.movie-sub-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 20px;
+    height: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-div button {
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #45c5f3;
+    color: rgb(34, 34, 34);
+    border: 2px solid transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-div button:hover {
+    background-color: #90bff1;
+}
+
+.search-div input {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+.div-super {
+    padding: 15px;
+}
+
+.div-sub {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.img-icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* Custom Modal Styling */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+}
+
+.modal-header,
+.modal-body {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #cff8e0;
+}
+
+.modal-body {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(152 232 245 / 97%);
+}
+
+/* Center the modal vertically */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+/* Adjust the text color and fonts */
+.modal-title {
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal-body p {
+    color: #3c3c3c;
+    font-family: Arial, sans-serif;
+}
