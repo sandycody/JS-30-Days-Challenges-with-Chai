@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartBurst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="left-section">
+                    <div class="logo">
+                        <i class="fa-brands fa-shopify"></i>
+                        CartBurst
+                    </div>
+                </div>
+                <ul>
+                    <li>Home</li>
+                    <li><a href="#checkout">Checkout</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="right-section">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Search for the Products...">
+                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+        
+                    <li>
+                        <a href="#shopping-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="product-list">
+            <!-- Product listing will be dynamically generated here -->
+        </section>
+        <section id="shopping-cart">
+                <h2>Shopping Cart</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total">Total: ₹0.00</div>
+                <button id="checkout-btn">Proceed to Checkout</button>
+        </section>
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="someone@example.com" required>
+
+                <label for="address">Address</label>
+                <input type="address" id="address" name="address" required></input>
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="XYZ" required>
+
+                <div id="order-details"></div>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <footer id="about">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Cart Burst</h3>
+                <p>Unbeatable deals on the latest trends, all in one place.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="icon-btn"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icon-btn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cart Burst. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script type="module" src="script.js"></script>
+
+</html>
